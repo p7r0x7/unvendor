@@ -17,7 +17,7 @@ const B3 = @import("std").crypto.hash.Blake3;
 pub fn main() !void {
     const hash_bitlen, const project_root = .{ 256, "/whixy" };
     const tarball_name, const out_dir_name = .{ "vendor.tzst", "vendor" };
-    const zstd_window, const read_buffer = .{ 1 << 29, 64 << 10 };
+    const zstd_window, const read_buffer = .{ 1 << 30, 64 << 10 };
 
     var expected: [hash_bitlen / 8]u8 = undefined;
     const wd = blk: {
